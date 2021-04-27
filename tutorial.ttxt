@@ -1,0 +1,4 @@
+npm install -global @ui5/cli
+ui5 --help
+npm init --yes
+ui5 init
