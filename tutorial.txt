@@ -7,3 +7,12 @@ When u initialize sap ui5 resource it is called bootstrapping
 sap web ide personal edition
 frontend
 jdk 1.8
+with sap fiori all application within fiori are realized as components & 
+they come with a descriptor file. So that they can be hosted within 
+the fiori launchpad itself, so fiori launchpad access(sort of container)
+and instantiates the app without having a local html file for all the 
+bootstrapping stuff & so instead the descriptor file is passed & the 
+component is loaded into the current html page. So this allows 
+several apps to be displayed on the same context & each app can define
+local settings.
+We can also use descriptor file to load additional resources and instantiates models
