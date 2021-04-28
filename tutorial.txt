@@ -2,6 +2,7 @@ npm install -global @ui5/cli
 ui5 --help
 npm init --yes
 ui5 init
+ui5 serve
 When u initialize sap ui5 resource it is called bootstrapping
 sap web ide personal edition
 frontend
