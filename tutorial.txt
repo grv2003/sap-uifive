@@ -4,15 +4,30 @@ npm init --yes
 ui5 init
 ui5 serve
 When u initialize sap ui5 resource it is called bootstrapping
+
 sap web ide personal edition
 frontend
 jdk 1.8
-with sap fiori all application within fiori are realized as components & 
-they come with a descriptor file. So that they can be hosted within 
-the fiori launchpad itself, so fiori launchpad access(sort of container)
-and instantiates the app without having a local html file for all the 
-bootstrapping stuff & so instead the descriptor file is passed & the 
-component is loaded into the current html page. So this allows 
-several apps to be displayed on the same context & each app can define
-local settings.
-We can also use descriptor file to load additional resources and instantiates models
+
+Use sap.ui.define for controllers and all other JavaScript modules to define a global namespace.
+ With the namespace, the object can be addressed throughout the application.
+
+Use sap.ui.require for asynchronously loading dependencies but without declaring a namespace,
+ for example code that is directly executed and is not referenced in other places.
+
+The helper method sap.ui.core.ComponentContainer instantiates the component by searching for 
+ a Component.js file in the namespace that is passed in as an argument. 
+
+All application-specific configuration settings will now further be put in a separate descriptor
+ file called manifest.json. This clearly separates the application coding from the configuration
+ settings and makes our app even more flexible. For example, all SAP Fiori applications are
+ realized as components and come with a descriptor file in order to be hosted in the
+ SAP Fiori launchpad.
+
+The SAP Fiori launchpad acts as an application container and instantiates the app 
+ without having a local HTML file for the bootstrap. Instead, the descriptor 
+ file will be parsed and the component is loaded into the current HTML page. 
+ This allows several apps to be displayed in the same context. Each app can define 
+ local settings, such as language properties, supported devices, and more. 
+ And we can also use the descriptor file to load additional resources and instantiate 
+ models like our i18n resource bundle.
