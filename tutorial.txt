@@ -41,4 +41,5 @@ The SAP Fiori launchpad acts as an application container and instantiates the ap
  As the name suggests, the margin is responsive and adapts to the screen size of the device.
  Tablets will get a smaller margin and phones in portrait mode will not get a margin to save
  space on these small screens.
- --CSS class
+--CSS class sapUiSmallMarginEnd
+--CSS class sapUiSmallMargin
