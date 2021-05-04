@@ -72,6 +72,10 @@
         },
         "uri": "<uriRelativeToManifest>"
       },
+      "invoice": {
+        "type": "sap.ui.model.json.JSONModel",
+        "uri": "Invoices.json"
+      },
       "": {
         "dataSource": "<dataSourceAlias>",
         "settings": {}
@@ -96,6 +100,7 @@
       "cozy": false
     }
   },
+
   "sap.platform.abap": {
     "_version": "1.1.0",
     "uri": "<uri>"

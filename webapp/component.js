@@ -5,15 +5,16 @@ sap.ui.define(
     "sap/ui/model/resource/ResourceModel",
     "./controller/HelloDialog",
   ],
-  function (UIComponent, JSONModel, HelloDialog) {
+  function (UIComponent, JSONModel, ResourceModel, HelloDialog) {
     "use strict";
     return UIComponent.extend("sap.ui.demo.walkthrough.Component", {
       metadata: {
         manifest: "json",
       },
       init: function () {
-        //call the init function of the parent
+        // call the init function of the parent
         UIComponent.prototype.init.apply(this, arguments);
+        // set data models
         var oData = {
           recipient: {
             name: "UI5",
@@ -25,6 +26,7 @@ sap.ui.define(
         // set dialog
         this._helloDialog = new HelloDialog(this.getRootControl());
       },
+
       exit: function () {
         this._helloDialog.destroy();
         delete this._helloDialog;
