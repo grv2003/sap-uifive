@@ -58,3 +58,25 @@ Dialogs are special, because they open on top of the regular app content and thu
  but since we want to stick with the declarative approach and create reusable artifacts to be as 
  flexible as possible, we will create an XML fragment containing the dialog. A dialog, after all, 
  can be used in more than only one view of your app.
+
+
+----------this is how an SAPUI5 application executes:
+
+1.Start of the application (index.html)
+2.Load UI5 resources
+3.Index’s bootstrap loads component (component.js)
+4.Component loads descriptor (manifest.json)
+5.Component creates models defined in the descriptor // models are instantiated
+6.Execute component’s init function
+7.Component’s init function executes parent UIComponent’s init function
+8.Parent UIComponent’s init function creates manifest’s router
+9.Parent UIComponent’s init function creates manifest’s root view (view1.view.xml)
+10.Root view creates root control
+11.Component’s init function initializes router
+12.Router create other necessary views
+13.Each view loads corresponding controller (view1.controller.js)
+14.Each controller executes init method // each controller’s init method is executed
+15.Router places views in root control // each view knows its parent
+16.Models are available in the views // each view and its controller are able to access the models
+17.evaluate view’s bindings
+18.retrieve model data
