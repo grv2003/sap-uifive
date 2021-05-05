@@ -80,3 +80,9 @@ Dialogs are special, because they open on top of the regular app content and thu
 16.Models are available in the views // each view and its controller are able to access the models
 17.evaluate view’s bindings
 18.retrieve model data
+
+manifes-->models-->"invoice": {
+        // "type": "sap.ui.model.json.JSONModel",
+        // "uri": "Invoices.json"
+        "dataSource": "invoiceRemote"
+      },
